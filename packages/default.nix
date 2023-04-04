@@ -54,6 +54,7 @@
       # Utils
       ethdo = callPackage ./utils/ethdo {inherit bls mcl;};
       sedge = callPackage ./utils/sedge {inherit bls mcl;};
+      tx-fuzz = callPackage ./utils/tx-fuzz {};
       zcli = callPackage ./utils/zcli {};
 
       # Dev
