@@ -63,6 +63,7 @@
       foundry = inputs.foundry-nix.defaultPackage.${system}.overrideAttrs (oldAttrs: {
         meta.platforms = [system];
       });
+      woke = callPackage ./utils/woke {};
 
       # Editors
       vscode-plugin-ackee-blockchain-solidity-tools = callPackage ./editors/vscode/extensions/ackee-blockchain.solidity-tools {};
