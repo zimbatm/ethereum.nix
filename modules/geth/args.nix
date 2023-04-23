@@ -103,6 +103,14 @@ with lib; {
     };
   };
 
+  log = {
+    format = mkOption {
+      description = "woot";
+      type = types.enum ["json" "logfmt" "terminal"];
+      default = "terminal";
+    };
+  };
+
   metrics = {
     enable = mkEnableOption (mdDoc "Go Ethereum prometheus metrics");
     addr = mkOption {

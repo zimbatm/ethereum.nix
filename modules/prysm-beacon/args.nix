@@ -45,6 +45,12 @@ with lib; {
     description = mdDoc "Disable monitoring service.";
   };
 
+  min-sync-peers = mkOption {
+    type = types.int;
+    default = 3;
+    description = mdDoc "The required number of valid peers to connect with before syncing.";
+  };
+
   monitoring-host = mkOption {
     type = types.str;
     default = "127.0.0.1";
