@@ -17,7 +17,7 @@
     packages = platformPkgs system rec {
       # Consensus Clients
       lighthouse = callPackage ./clients/consensus/lighthouse {inherit foundry;};
-      prysm = callPackage ./clients/consensus/prysm {inherit bls blst;};
+      prysm = callPackageUnstable ./clients/consensus/prysm {inherit bls blst;};
       teku = callPackage ./clients/consensus/teku {};
       nimbus = callPackageUnstable ./clients/consensus/nimbus {};
 
